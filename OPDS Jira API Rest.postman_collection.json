@@ -1,0 +1,438 @@
+{
+	"id": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+	"name": "OPDS Jira API Rest",
+	"description": "",
+	"order": [
+		"3851c952-cb96-b593-48f4-be7f7e92fd13",
+		"e0e9db83-f8db-ddd2-08c2-c3825936e136",
+		"9c3b8591-ae92-68bf-2622-002eb668e633",
+		"138f8f0a-0440-e341-83f5-967c3b4d17f8",
+		"f408e187-7ba1-5291-3bc1-bf7a325b71f2",
+		"c36d6be1-4f99-cca4-f9ea-f4152acc7c69",
+		"2ec0456a-698c-70d3-c049-3041ec861e31",
+		"9b7d159c-4521-99a6-7323-0d4e1b0af034",
+		"0044d464-2682-090c-70da-36067cc4520e",
+		"12830425-573e-0467-12a9-a035da21887f",
+		"928ed5af-3db5-cb1d-9042-3a0c81b1c347"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1554731157013,
+	"owner": "5518284",
+	"public": false,
+	"requests": [
+		{
+			"id": "0044d464-2682-090c-70da-36067cc4520e",
+			"headers": "",
+			"headerData": [],
+			"url": "172.16.18.52:8080/rest/api/2/attachment/10146",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"data": null,
+			"dataMode": "params",
+			"name": "Abtain data of one attachment id",
+			"description": "172.16.18.52:8080/rest/api/2/attachment/10146",
+			"descriptionFormat": "html",
+			"time": 1557412410039,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "12830425-573e-0467-12a9-a035da21887f",
+			"headers": "Authorization: Basic UmVjZXB0b3I6b3Bkcw==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://incidenciasexternas.opds.gba.gov.ar:8080/secure/attachment/10533/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"data": null,
+			"dataMode": "params",
+			"name": "Abtain attachment Link Dowload + access",
+			"description": "172.16.18.52:8080/rest/api/2/attachment/10146/",
+			"descriptionFormat": "html",
+			"time": 1558546761773,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "138f8f0a-0440-e341-83f5-967c3b4d17f8",
+			"headers": "Content-Type: application/json\nAuthorization: Basic UmVjZXB0b3I6b3Bkcw==\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/issue/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1555955702806,
+			"name": "Create REQS OPDS",
+			"description": "Reqs OPDS create",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"responses": [],
+			"rawModeData": "{\r\n    \"fields\": {\r\n       \"project\":\r\n       {\r\n          \"key\": \"REQOPDS\"\r\n       },\r\n       \"summary\": \"REST prueba postman\",\r\n       \"description\": \"descripcion problema\",\r\n       \"customfield_10007\": \"pedrito@gmail.com\",\r\n       \"issuetype\": {\r\n          \"name\": \"REQS OPDS\"\r\n       }\r\n   }\r\n}"
+		},
+		{
+			"id": "2ec0456a-698c-70d3-c049-3041ec861e31",
+			"headers": "Content-Type: application/json\nAuthorization: Basic UmVjZXB0b3I6b3Bkcw==\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/issue/ISSUE-420/comment",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1556806086657,
+			"name": "Put one comment in issue",
+			"description": "172.16.18.52:8080/rest/api/2/issue/ISSUE-420/comment\ncon body: Comentario",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"responses": [],
+			"rawModeData": "{\n\t\"body\": \"this is a comment from rest API client\"\n}"
+		},
+		{
+			"id": "3851c952-cb96-b593-48f4-be7f7e92fd13",
+			"headers": "Authorization: Basic UmVjZXB0b3I6b3Bkcw==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/issue/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1554831538497,
+			"name": "Create ISSUE MDAOL",
+			"description": "Creación de un issue genérico MDAOL",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"responses": [],
+			"rawModeData": "{\r\n    \"fields\": {\r\n       \"project\":\r\n       {\r\n          \"key\": \"MDAOL\"\r\n       },\r\n       \"summary\": \"REST prueba postman\",\r\n       \"description\": \"descripcion problema\",\r\n       \"customfield_10007\": \"pedrito@gmail.com\",\r\n       \"issuetype\": {\r\n          \"name\": \"MDA-OL\"\r\n       }\r\n   }\r\n}"
+		},
+		{
+			"id": "928ed5af-3db5-cb1d-9042-3a0c81b1c347",
+			"headers": "Authorization: Basic UmVjZXB0b3I6b3Bkcw==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/search?jql=Petitioner~\"prueba@gmail.com\"+and+status=\"PENDIENTE\"",
+			"queryParams": [
+				{
+					"key": "jql",
+					"value": "Petitioner~\"prueba@gmail.com\"+and+status=\"PENDIENTE\"",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Abtain issues by Petitioner and status",
+			"description": "issues de una persona y un estado",
+			"descriptionFormat": "html",
+			"time": 1559762145025,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n    \"fields\": {\r\n       \"project\":\r\n       {\r\n          \"key\": \"MDAOL\"\r\n       },\r\n       \"summary\": \"REST prueba\",\r\n       \"description\": \"descripcion problema\",\r\n       \"customfield_10007\": \"pedrito@gmail.com\",\r\n       \"issuetype\": {\r\n          \"name\": \"MDA-OL\"\r\n       }\r\n   }\r\n}"
+		},
+		{
+			"id": "9b7d159c-4521-99a6-7323-0d4e1b0af034",
+			"headers": "Authorization: Basic UmVjZXB0b3I6b3Bkcw==\nX-Atlassian-Token: nocheck\n//Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "X-Atlassian-Token",
+					"value": "nocheck",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/issue/ISSUE-488/attachments",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "file",
+					"value": "",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1557493932423,
+			"name": "Put one attachment in issue",
+			"description": "172.16.18.52:8080/rest/api/3/issue/ISSUE-473/attachments",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"responses": []
+		},
+		{
+			"id": "9c3b8591-ae92-68bf-2622-002eb668e633",
+			"headers": "Content-Type: application/json\nAuthorization: Basic UmVjZXB0b3I6b3Bkcw==\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/issue/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1554832167564,
+			"name": "Create ISSUE P3P1",
+			"description": "issue create",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"responses": [],
+			"rawModeData": "{\r\n    \"fields\": {\r\n       \"project\":\r\n       {\r\n          \"key\": \"ISSUE\"\r\n       },\r\n       \"summary\": \"REST prueba postman\",\r\n       \"description\": \"descripcion problema\",\r\n       \"customfield_10007\": \"pedrito@gmail.com\",\r\n        \"customfield_10302\": {\r\n            \"value\": \"DPSIT\"\r\n        },\r\n       \"issuetype\": {\r\n          \"name\": \"ISSUE P3P1\"\r\n       }\r\n   }\r\n}"
+		},
+		{
+			"id": "c36d6be1-4f99-cca4-f9ea-f4152acc7c69",
+			"headers": "Authorization: Basic UmVjZXB0b3I6b3Bkcw==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/search?jql=Petitioner~\"prueba@gmail.com\"&jql=status=\"PENDIENTE\"",
+			"queryParams": [
+				{
+					"key": "jql",
+					"value": "Petitioner~\"prueba@gmail.com\"",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "jql",
+					"value": "status=\"PENDIENTE\"",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1559758485499,
+			"name": "Abtain issues by Petitioner",
+			"description": "todos los issues que tiene un petitioner",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"responses": [],
+			"rawModeData": "{\r\n    \"fields\": {\r\n       \"project\":\r\n       {\r\n          \"key\": \"MDAOL\"\r\n       },\r\n       \"summary\": \"REST prueba\",\r\n       \"description\": \"descripcion problema\",\r\n       \"customfield_10007\": \"pedrito@gmail.com\",\r\n       \"issuetype\": {\r\n          \"name\": \"MDA-OL\"\r\n       }\r\n   }\r\n}"
+		},
+		{
+			"id": "e0e9db83-f8db-ddd2-08c2-c3825936e136",
+			"headers": "Authorization: Basic UmVjZXB0b3I6b3Bkcw==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/issue/10619",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Abtain ISSUE by Number",
+			"description": "Traer info de issue",
+			"descriptionFormat": "html",
+			"time": 1554732910769,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n    \"fields\": {\r\n       \"project\":\r\n       {\r\n          \"key\": \"MDAOL\"\r\n       },\r\n       \"summary\": \"REST prueba\",\r\n       \"description\": \"descripcion problema\",\r\n       \"customfield_10007\": \"pedrito@gmail.com\",\r\n       \"issuetype\": {\r\n          \"name\": \"MDA-OL\"\r\n       }\r\n   }\r\n}"
+		},
+		{
+			"id": "f408e187-7ba1-5291-3bc1-bf7a325b71f2",
+			"headers": "Authorization: Basic UmVjZXB0b3I6b3Bkcw==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic UmVjZXB0b3I6b3Bkcw==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "172.16.18.52:8080/rest/api/2/issue/ISSUE-412/comment",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c287ef6a-219f-b78d-8e59-2d7c6ef09833",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Abtain comments by Number",
+			"description": "Traer info de issue",
+			"descriptionFormat": "html",
+			"time": 1556299509443,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n    \"fields\": {\r\n       \"project\":\r\n       {\r\n          \"key\": \"MDAOL\"\r\n       },\r\n       \"summary\": \"REST prueba\",\r\n       \"description\": \"descripcion problema\",\r\n       \"customfield_10007\": \"pedrito@gmail.com\",\r\n       \"issuetype\": {\r\n          \"name\": \"MDA-OL\"\r\n       }\r\n   }\r\n}"
+		}
+	]
+}

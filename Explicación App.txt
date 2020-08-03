@@ -1,0 +1,49 @@
+. Modelo: es la lógica de negocios. Es decir las clases y métodos que se comunican directamente con 
+  la base de datos.
+. Vista: es la encargada de mostrar la información al usuario, de forma gráfica y legible.
+. Controlador: el intermediario entre la vista y el modelo, se encarga de controlar las interacciones
+  del usuario en la vista, pide los datos al modelo y los devuelve de nuevo a la vista para que esta
+  los muestre al usuario. Es decir las llamadas a clases y métodos, y los datos recibidos de formularios.
+
+El funcionamiento básico del patrón MVC, se resume en:
+    El usuario realiza una petición.
+    El controlador captura la petición.
+    Hace la llamada al modelo correspondiente.
+    El modelo sera el encargado de interactuar con la base de datos.
+    El controlador recibe la información y la enviá a la vista.
+    La vista muestra la información.
+
+----
+. Web Desarrollo: https://desarrollo.opds.gba.gov.ar/intra/Jira/View/login.php
+. Inicio: desde /View/login.php
+. Puntos de inflexión:
+  Para crear tickets son los dos controladores necesarios por los cuáles hay que pasar, 
+  sino no se pueden crear tickets. Controlan la sesión. 
+  - contructIssue-C.php
+  - contructReq-C.php
+
+----
+Ejemplo: Flujo de creación (issue o req):
+1) a) Desde la vista login.php me logueo (le pega a api de OPDS para loguear) (View).
+   b) Si se autentica en loginOPDS-C.php (Controller) va a index.php (View).
+2) a) index.php muestra las distintas opciones para dar de alta tickets (Issues o Requerimientos
+   de Jira).
+   b) Depende de que opción elija, va a ir al controller correspondiente (issue o requerimiento).
+      Va a contrusctIssue-C.php o contructReq-C.php (Controller).
+3) a) contrusctIssue-C.php verifica si está logueado el usuario; si no está manda msj de error a la
+   vista que muestra los msjs, si lo está procede a crear el ticket con createTicket.php (View).
+   b) createTicket.php (View) pide los campos necesarios para llenar el issue en jira.
+   c) Los datos cargados los envío a través de un formulario a createIssue-C.php (Controller).
+4) a) createIssue-C.php recibe los datos, los formatea, y se hace a través de rest de jira 
+      la consulta (se hace el curl); creándose el issue.
+   b) Si se crea; muestra la información del ticket en ticketCreatedInfo.php (View).
+   c) ticketCreatedInfo.php (View) muestra la información del ticket creado recientemente.
+
+Ejemplo: Flujo de búsqueda (issue o req):
+1) a) searchTicket.php (View) tiene formuladio de ingreso de dato para la búsqueda.
+   b) Ingresado el número, viajan los datos a searchIssue-C.php (Controller).
+2) a) seachIssue-C.php obtiene los datos, los formatea, y se hace a través de rest de jira la consulta
+   (se hace el curlo); trayendo el issue si puso bien el dato o no.
+   b) Se muestran los datos obtenidos en ticketSearchedInfo.php (View)
+
+Buscar ticket puede ser por número(21334) o por Key (ISSUE-322)
